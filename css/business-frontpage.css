@@ -1,0 +1,120 @@
+/*
+ * Start Bootstrap - Business Frontpage (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+body {
+    padding-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    background-color: #c5c6c9;
+}
+
+/* Header Image Background - Change the URL below to your image path (example: ../images/background.jpg) */
+
+.business-header {
+    height: 250px;
+    background: url('http://placehold.it/1920x400') center center no-repeat scroll;
+    background-image: url(fond_homepage.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+/* Customize the text color and shadow color and to optimize text legibility. */
+
+.tagline {
+    text-shadow: 0 0 10px #000;
+    color: #08600b;
+}
+
+.img-center {
+    margin: 0 auto;
+    box-shadow: 0px 0px 20px 0px #00520b;
+
+}
+
+footer {
+    margin: 50px 0;
+}
+
+.navbar-inverse .navbar-toggle .icon-bar {
+    background-color: #129003;
+  }
+  .navbar-inverse .navbar-toggle {
+    border-color: #076508;
+}
+.navbar-inverse .navbar-brand {
+    color: #129003;
+
+}
+.navbar-inverse .navbar-nav>li>a {
+    color:  #129003;
+}
+.row {
+   margin-right: auto ;
+   margin-left: auto ;
+}
+.img-circle {
+    border-radius: 25%;
+}
+.navbar-inverse {
+    background-color: #000000;
+    border-color: # #129003;
+    box-shadow: 0px 0px 20px 0px  #129003;
+}
+.indexImg{
+  transition: all 1s ease;
+
+}
+.indexImg:hover{
+  transform: scale(1.1);
+  box-shadow: 0px 0px 50px green;
+}
+.navbar-nav li a{
+  transition: all 0.5s ease;
+}
+.navbar-nav li a:hover{
+  transform: scale(1.1);
+  color: #037408;
+  background-color:#000000;
+}
+.nav>li{
+  text-align: center;
+}
+.navbar-brand{
+  transition: all 1s ease;
+}
+.navbar-brand:hover{
+    transform: scale(1.1);
+}
+.huge{
+  font-size: 50px;
+  line-height: normal;
+  color: rgb(3, 158, 0);
+
+}
+.little{
+  font-size: 25px;
+  line-height: normal;
+  color:rgb(219, 212, 212);
+
+
+}
+
+.panel-heading {
+
+      background-color:#131614;
+    border-color:rgb(3, 158, 0) ;
+}
+.panel{
+  transition: all 0.5s ease;
+}
+.panel:hover{
+  transform: scale(1.1);
+  box-shadow: 0px 5px 20px 0px rgb(27, 28, 28);
+}
+.menuUser{
+  background-color:#000000;
+
+}
