@@ -8,7 +8,7 @@ include "../index/header.php";
 
 
 $msg_error="";
-
+if(!isConnected()){
 if (isset($_POST["mail"]) && isset($_POST["pwd_admin"])) {
 
 	$db=dbconnect();
@@ -141,9 +141,11 @@ if (isset($_POST["mail"]) && isset($_POST["pwd_admin"])) {
 	</footer>
 
 	<?php
+}else {
+	?>
+<script>alert("Accès refusé.")</script>
+<?php
+header("Location:../index/index.php");
+}
+ ?>
 
-
-
-
-
-?>
