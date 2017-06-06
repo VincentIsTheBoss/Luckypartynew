@@ -51,7 +51,9 @@ if (!empty($_GET["id"])) {
 	          </li>
 
 						<li>
+
 	            <a href="../index/musique.php">Musique</a>
+
 	          </li>
 							<?php if (!isConnected() && !AdminConnected()) {?>
 	          <li>

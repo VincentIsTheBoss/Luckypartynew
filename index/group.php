@@ -51,10 +51,10 @@ foreach ($queryid -> fetchAll() as$value) {
   $querysonggenderthem->execute(["id_musique"=> $valuesongidthem["id_musique"]]);
   $valuegenderthem = $querysonggenderthem -> fetch();
 
-
     if ($valuegenderme["genre"]== $valuegenderthem["genre"]) {
       $queryidthem = $db->prepare("SELECT id FROM ecouter WHERE id_musique=:id_musique AND id=:id ;");
       $queryidthem->execute(["id_musique"=> $valuesongidthem["id_musique"],"id" =>$value["id"]]);
+
 
       foreach ($queryidthem-> fetchAll() as $valueidthem) {
         $query = $db->prepare("UPDATE users SET id_groupe=:id_groupe WHERE id=:id");
@@ -75,6 +75,7 @@ foreach ($queryid -> fetchAll() as$value) {
 
 
       }
+
 
     }
   }
