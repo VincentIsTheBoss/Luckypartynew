@@ -41,6 +41,7 @@ $valuegenderme=$querysonggenderme->fetch();
 
 $queryid = $db->prepare("SELECT id,nom,prenom,pseudo FROM users WHERE id!=:id AND researching=1 ORDER BY RAND();");
 $queryid->execute(["id"=>$_SESSION["id"]]);
+
 foreach ($queryid -> fetchAll() as$value) {
   $querysongidthem = $db->prepare("SELECT id_musique  FROM ecouter WHERE id=:id AND is_favourite=1; ");
   $querysongidthem->execute(["id"=> $value["id"]]);
@@ -50,7 +51,6 @@ foreach ($queryid -> fetchAll() as$value) {
   $querysonggenderthem->execute(["id_musique"=> $valuesongidthem["id_musique"]]);
   $valuegenderthem = $querysonggenderthem -> fetch();
 
-    echo " ".$valuegenderthem["genre"];
     if ($valuegenderme["genre"]== $valuegenderthem["genre"]) {
       $queryidthem = $db->prepare("SELECT id FROM ecouter WHERE id_musique=:id_musique AND id=:id ;");
       $queryidthem->execute(["id_musique"=> $valuesongidthem["id_musique"],"id" =>$value["id"]]);
@@ -77,8 +77,6 @@ foreach ($queryid -> fetchAll() as$value) {
       }
 
 
-
-
     }
   }
   $query = $db->prepare("UPDATE users SET id_groupe=:id_groupe WHERE id=:id");
@@ -90,4 +88,3 @@ $query = $db->prepare("UPDATE users SET researching=0 WHERE id=:id AND researchi
 );
 $query->execute(["id"=>$_SESSION["id"]]);
 ?>
-*/
