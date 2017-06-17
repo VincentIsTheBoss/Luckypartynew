@@ -8,11 +8,13 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
   <style>
   .carousel-inner > .item > img,
   .carousel-inner > .item > a > img {
       width: 70%;
       margin: auto;
+
   }
   </style>
 </head>
@@ -26,12 +28,10 @@
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
-
 <?php
   session_start();
   require "../admin/lib.php";
   include "header.php";
-
   $count = 0;
 
   $db=dbconnect();
@@ -44,14 +44,15 @@
       $active = "";
     }
     echo "<div class='item ".$active."'>
-        <center>
-      <h3>".$value["artiste"]."</h3>
-      <p>".$value["nom_piste"]."</p>
-      </center>
-      <iframe  width='425' height='344' class='col-sm-offset-4 col-sm-4' src='".$value["url"]."' frameborder='0' allowfullscreen></iframe>
-
+            <center>
+              <h3  class='artiste'>".$value['artiste']."</h3>
+              <p class='titre'>".$value['nom_piste']."</p>
+              <p class onclick=\"is_favourite('".$value['url']."')\">☆</p>
+            </center>
+            <iframe  width='425' height='344' class='col-sm-offset-4 col-sm-4' src='".$value['url']."' frameborder='0' allowfullscreen></iframe>
     </div>";
     $count++;
+
   }
 
  ?>
@@ -69,7 +70,7 @@
     </a>
   </div>
 </div>
-
+<script src="code.js"></script>
 </body>
 </html>
 
